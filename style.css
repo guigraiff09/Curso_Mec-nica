@@ -50,6 +50,7 @@ body{
     gap: 40px;
 }
 .list1 a{
+    display: flex;
     color:#40c8dc ;
     text-decoration: underline;
     text-decoration-color: #ffc300;
@@ -58,17 +59,22 @@ body{
     border-radius: 8px;
     font-size: 18px;
     cursor: pointer;
-    transition: 0.6s ease;
+    transition: 0.4s ease;
+}
+
+.list1 a:hover{
+    transform: scale(1.1);
 }
 .list a{
+    display: flex;
     color:#ccc;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 0.4s ease;
     font-size: 18px;
 }
 
 .list a:hover{
-    font-size: 1.2rem;
+    transform: scale(1.1);
     text-decoration: underline;
     text-decoration-color: #ffc300;
     text-decoration-thickness: 3px;
@@ -163,7 +169,7 @@ text-align: left;
 .dest-avançado{
     color: #40c8dc;
 }
-.button-comecar {
+.comecar {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Cola o botão na esquerda e o texto na direita */
@@ -209,4 +215,259 @@ text-align: left;
 
 .comecar i {
     font-size: 20px;
+}
+
+/*Infromações do curso */
+
+.informacao{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 10px;
+}
+.info-linha{
+    border: none;
+    border-top: 2px solid #102A3C;
+    width: 25px;
+    transform: rotate(-90deg);
+}
+.info-curso p{
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.info-curso i{
+    font-size: 20px;
+}
+
+/*Modulos do curso*/
+
+.nivel{
+    padding: 20px 70px;
+}
+
+.escolha-nivel{
+    color: #102A3C;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.cursos-disponiveis{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.Aprenda-ritmo{
+    color: #5e6c84;
+    font-weight: 600;
+}
+.todos-cursos p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.todos-cursos a{
+    color: #40c8dc;
+    text-decoration: underline;
+    text-decoration-color: #40c8dc;
+    text-decoration-thickness: 2px;
+}
+
+
+.todos-cursos i{
+    cursor: pointer;
+    font-size: 18px;
+    color: #40c8dc;
+}
+
+/* Container de Cartões */
+.card-box {
+    padding: 20px 60px;
+    display: flex;
+    gap: 24px;
+}
+
+/* Estrutura Base Única para TODOS os Cartões */
+.card {
+    position: relative;
+    overflow: hidden; /* Garante que a imagem cortada não saia das bordas arredondadas */
+    border: 1px #E2E8F0 solid;
+    padding: 24px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho do Cartão */
+.titulo-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+/* Ícone Redondo Base */
+.icone-box i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+/* Textos e Títulos */
+.modulo {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4A5568;
+    margin: 0;
+}
+
+.inicio {
+    font-size: 22px;
+    font-weight: 700;
+    color: #102A3C;
+    margin: 2px 0 0 0;
+}
+
+.aprender-carro {
+    position: relative;
+    z-index: 2;
+    max-width: 240px;
+    font-size: 14px;
+    color: #5E6C84;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.capitulo {
+    position: relative;
+    z-index: 2;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+/* Botão Base */
+.button-card a {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Imagem de Fundo (Posicionada em relação ao .card) */
+.card-carro img {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.1; /* Transparência suave para não atrapalhar o texto */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ===================================================
+   CORES ESPECÍFICAS (Apenas altera o ícone e o botão)
+   =================================================== */
+
+/* Verde (Iniciante) */
+.card.verde .icone-box i,
+.card.verde .button-card a {
+    background-color: #00875A;
+}
+.card.verde .modulo,
+.card.verde .inicio{
+    color: #00875A;
+}
+
+/* Azul (Intermediário) */
+.card.azul .icone-box i,
+.card.azul .button-card a {
+    background-color: #0065FF;
+}
+.card.azul .modulo,
+.card.azul .inicio{
+    color: #0065FF;
+}
+
+/* Roxo (Avançado) */
+.card.roxo .icone-box i,
+.card.roxo .button-card a {
+    background-color: #5243AA;
+}
+
+.card.roxo .modulo,
+.card.roxo .inicio{
+    color: #5243AA;
+}
+
+/*Parte da biblioteca de mecanico*/
+
+.biblioteca-container{
+      padding: 20px 60px;
+      background-color: #102a3c;
+}
+
+.biblioteca{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.livro i{
+    font-size: 50px;
+    color: #40c8dc;
+}
+
+.text-biblioteca{
+    color: #ccc;
+}
+
+.text-meca{
+    color: #ccc;
+}
+.input-box{
+    position: relative ;
+}
+.input-box input{
+    width: 100%;
+    max-width: 700px;
+    background-color: #ccc;
+    border-radius: 10px;
+    border: none;
+    padding: 10px ;
+}
+
+.input-box i{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    z-index: 20;
+    background-color: #40c8dc;
+    padding: 7.5px 15px;
+    border-radius: 10px;
 }
