@@ -41,7 +41,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 100px;   
+
 }
 .menu-su{
     display: flex;
@@ -642,10 +642,12 @@ text-align: left;
 .rodape-container{
     border-top:1px #40c8dc solid ;
     display: flex;
-    gap: 30px;
     align-items: center;
     justify-content: space-around;
     background-color: #102A3C;
+    padding: 0 60px;
+
+
 }
 
 .logo-rodape img{
@@ -656,4 +658,48 @@ text-align: left;
 
 .futuro{
     color: #ccc;
+}
+
+.paginas{
+    position: relative;
+    margin-top: 40px;
+}
+
+.paginas-site{
+    list-style: none;
+}
+
+.paginas-site li a {
+    color: #ccc;
+    transition: 0.3s ease;
+}
+
+.paginas-site li a:hover{
+    color: #2e9cad;
+}
+
+/*Forma de contato*/
+
+.Contato{
+    text-align: center;
+    margin-top: 40px;
+}
+.contato-icone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.contato-icone i{
+    font-size: 30px;
+    color: #ccc;
+}
+.contato-icone i:hover{
+    color: #2e9cad;
+}
+.disciplina{
+    color: #ccc;
+    width: 159px;
 }
